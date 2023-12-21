@@ -25,9 +25,9 @@ git checkout -b rt1800_23052
 
 make menuconfig
 
-#====build the image=====
-
 make defconfig
+
+#====build the image=====
 
 make
 
