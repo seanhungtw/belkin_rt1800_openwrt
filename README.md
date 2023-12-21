@@ -5,6 +5,10 @@ CPU: MT7621
 
 Wi-Fi chip: MT7615D (DBDC)
 
+Refer:
+
+https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
+
 #=====Get the code=====
 
 git clone https://git.openwrt.org/openwrt/openwrt.git
@@ -24,6 +28,8 @@ git checkout -b rt1800_23052
 #====menuconfig=====
 
 make menuconfig
+
+#Select MediaTek Ralink MIPS => MT7621 based boards => Belkin RT1800
 
 make defconfig
 
