@@ -41,6 +41,8 @@ make
 
 #MTK hardware nat may not working on Linux kernel  5.15.137
 
+#The WAN to LAN speed can reach about 890~900 Mbps, but it will cost a lot of CPU power
+
 # compile openwrt in WLS2
 
   #you need to disable windows PATH: or it will meet build errors
