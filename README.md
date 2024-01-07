@@ -40,3 +40,12 @@ make
 #====know issues====
 
 #MTK hardware nat may not working on Linux kernel  5.15.137
+
+# compile openwrt in WLS2
+
+  #you need to disable windows PATH: or it will meet build errors
+
+~/openwrt$ cat /etc/wsl.conf
+[interop]
+enabled = false
+appendWindowsPath = false
