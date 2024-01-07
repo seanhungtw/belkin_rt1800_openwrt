@@ -46,6 +46,9 @@ make
   #you need to disable windows PATH: or it will meet build errors
 
 ~/openwrt$ cat /etc/wsl.conf
+
 [interop]
+
 enabled = false
+
 appendWindowsPath = false
