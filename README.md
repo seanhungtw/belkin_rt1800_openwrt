@@ -43,6 +43,10 @@ make
 
 #The WAN to LAN speed can reach about 890~900 Mbps, but it will cost a lot of CPU power
 
+Some sone have try to porting mtk hnat to 5.10 (but 23.05 is using DSA, so it might have problems)
+
+https://forum.openwrt.org/t/use-mtk-sdk-hwnat-driver-to-replace-hw-flow-offload/128120
+
 # compile openwrt in WLS2
 
   #you need to disable windows PATH: or it will meet build errors
