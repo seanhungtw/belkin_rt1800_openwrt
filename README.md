@@ -9,7 +9,17 @@ Refer:
 
 https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 
-#=====Get the code=====
+# Get the code
+
+#===== you may want to set some git config to avoid git error
+
+#====git config -l
+
+#====git config --global http.postBuffer 1048576000
+
+#====git config --global http.lowSpeedLimit 0
+
+#====git config --global http.lowSpeedTime 999999
 
 git clone https://git.openwrt.org/openwrt/openwrt.git
 
