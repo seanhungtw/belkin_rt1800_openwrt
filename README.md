@@ -17,11 +17,13 @@ https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 
 #====git config --global http.postBuffer 1048576000
 
+#====git config --global https.postBuffer 1048576000
+
 #====git config --global http.lowSpeedLimit 0
 
 #====git config --global http.lowSpeedTime 999999
 
-git clone https://git.openwrt.org/openwrt/openwrt.git
+git clone https://git.openwrt.org/openwrt/openwrt.git # or https://github.com/openwrt/openwrt.git
 
 cd openwrt
 
