@@ -19,7 +19,7 @@ cd openwrt
 git checkout v23.05.2
 git checkout -b rt1800_23052
 ```
-### Overwirte the code in the belkin_rt1800_openwrt/openwrt23
+### Dwonload belkin_rt1800_openwrt/openwrt23 and paste it to the 23.05.2 sourcr code
 just copy and paste, don't delete existed files in 23.05.2
 
 ### update feeds
