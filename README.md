@@ -2,7 +2,7 @@
 - Extraordinary is you improve yourself do every day
 
 # belkin_rt1800_openwrt
-A note for how to build a openwrt image for RT1800
+A note for how to build a openwrt image for RT1800 with MTK HNAT (23.05 only)
 
 CPU: MT7621
 
@@ -19,6 +19,9 @@ cd openwrt
 git checkout v23.05.2
 git checkout -b rt1800_23052
 ```
+### Overwirte the code in the belkin_rt1800_openwrt/openwrt23
+just copy and paste, don't delete existed files in 23.05.2
+
 ### update feeds
 ```
 ./scripts/feeds update -a
@@ -37,10 +40,8 @@ make -j$thread
 ```
 ### Known issues
 
-- MTK hardware nat may not working on Linux kernel  5.15.137
-- The WAN to LAN speed can reach about 890~900 Mbps, but it will cost a lot of CPU power
-- Some sone have try to porting mtk hnat to 5.10 (but 23.05 is using DSA, so it might have problems)
-- https://forum.openwrt.org/t/use-mtk-sdk-hwnat-driver-to-replace-hw-flow-offload/128120
+- Can't use DSA switch, rollback to swconfig (because we need to use MTK 7530 driver)
+- wifi interface name is hardcoded in the dts, currently only support "phy0-ap0", "phy1-ap0", "phy0-ap1", "phy1-ap1", "phy0-sta0", "phy1-sta0"
 
 ## Troble shooting
 
@@ -86,3 +87,24 @@ then it goes to the original Openwrt code to generate default /etc/config/networ
 ```
 package/base-files/files/bin/config_generate
 ```
+### default wireless config flow
+default the /etc/config wireless is empty, when system init, it will call 
+```
+/etc/init.d/network
+```
+then the netwaork script will call
+```
+/sbin/wifi
+```
+the wifi script will include any file in the /lib/wifi
+
+take rt1800 as example:
+```
+/lib/wifi/mac80211.sh
+```
+if the driver works, the ifname will be created in the following path:
+```
+root@OpenWrt:/# ls /sys/class/ieee80211/
+phy0  phy1
+```
+the mac80211.sh will generate the /etc/config/wireless file according to phy0  phy1 data above
