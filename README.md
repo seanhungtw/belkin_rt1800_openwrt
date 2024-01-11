@@ -1,4 +1,5 @@
 - (C) 2024 Sean.Hung <https://github.com/seanhungtw/belkin_rt1800_openwrt_23052>
+- Extraordinary is you improve yourself do every day
 
 # belkin_rt1800_openwrt
 A note for how to build a openwrt image for RT1800
@@ -66,4 +67,22 @@ you need to disable windows PATH: or it will meet build errors
 enabled = false
 
 appendWindowsPath = false
+```
+
+## Notes of MTK board customization
+
+### default /etc/config/network & eth nterface name (both openwrt 22 & 23)
+
+you can configure interface name, mac here:
+```
+#file :target/linux/ramips/mt7621/base-files/etc/board.d/02_network
+
+#for example
+ucidef_set_interfaces_lan_wan "lan1, lan2, ..." "wan"
+lan_mac="00:11:22:33:44:55"
+wan_mac="00:11:22:33:44:56"
+```
+then it goes to the original Openwrt code to generate default /etc/config/network file:
+```
+package/base-files/files/bin/config_generate
 ```
