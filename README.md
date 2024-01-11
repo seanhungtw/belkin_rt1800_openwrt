@@ -1,4 +1,4 @@
-- (C) 2024 Sean.Hung <https://github.com/seanhungtw/belkin_rt1800_openwrt_23052>
+- (C) 2024 Sean.Hung <https://github.com/seanhungtw/belkin_rt1800_openwrt>
 - Extraordinary is you improve yourself do every day
 
 # belkin_rt1800_openwrt
