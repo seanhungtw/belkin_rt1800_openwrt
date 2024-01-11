@@ -6,7 +6,7 @@ A note for how to build a openwrt image for RT1800
 
 CPU: MT7621
 
-Wi-Fi chip: MT7615D (DBDC)
+Wi-Fi chip: MT7915D (DBDC)
 
 Refer:
 
