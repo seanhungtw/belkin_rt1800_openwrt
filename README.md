@@ -1,16 +1,14 @@
 - (C) 2024 Sean.Hung <https://github.com/seanhungtw/belkin_rt1800_openwrt>
-- Extraordinary is you improve yourself do every day
+- Extraordinary is you improve yourself every day
 
 # belkin_rt1800_openwrt
-A note for how to build a openwrt image for RT1800 with MTK HNAT (23.05 only)
+- A note for how to build a openwrt image for RT1800 with MTK HNAT (23.05 only)
+- CPU: MT7621
+- Wi-Fi chip: MT7915D (DBDC)
 
-CPU: MT7621
-
-Wi-Fi chip: MT7915D (DBDC)
-
-Refer:
-
-https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
+- Refer: https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
+- if the MTK hnat work properly, you should see CPU usage is neraly zero when WAN => LAN traffic running in full speed (big tcp packet)
+- <img src='/readme_mt7621_cpu_wantolan.jpg' width='50%'>
 
 ## Get the code
 ```
