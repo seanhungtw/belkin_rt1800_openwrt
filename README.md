@@ -90,7 +90,7 @@ default the /etc/config wireless is empty, when system init, it will call
 ```
 /etc/init.d/network
 ```
-then the netwaork script will call
+then the network script will call
 ```
 /sbin/wifi
 ```
