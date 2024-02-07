@@ -2,7 +2,9 @@
 - Extraordinary is you improve yourself every day
 
 # belkin_rt1800_openwrt
-- A note for how to build a openwrt image for RT1800 with MTK HNAT (23.05 only)
+- A note for how to build a Openwrt image for RT1800 with MTK HNAT (23.05 only)
+- Original Openwrt doesn't support MTK HANT on MT7921 platform, immortalwrt has MTK HANT support on 5.10 kernel.
+- I porting the driver from immortalwrk and modify it, so it can running on 5.15 kernel and matches belkin rt1800 hardware
 - CPU: MT7621
 - Wi-Fi chip: MT7915D (DBDC)
 
