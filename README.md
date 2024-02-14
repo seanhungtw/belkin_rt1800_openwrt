@@ -44,7 +44,7 @@ make -j$thread
 - Can't use DSA switch, rollback to swconfig (because we need to use MTK 7530 driver)
 - wifi interface name is hardcoded in the dts, currently only support "phy0-ap0", "phy1-ap0", "phy0-ap1", "phy1-ap1", "phy0-sta0", "phy1-sta0"
 
-## Troble shooting
+## Trouble shooting
 
 ### git issue
 
